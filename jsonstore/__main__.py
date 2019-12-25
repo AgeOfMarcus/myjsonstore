@@ -23,7 +23,7 @@ def main(args):
 	if args.upload:
 		try:
 			fd = open(args.upload,"rb").read()
-			k, c = Client().store(fd)
+			k, c = Client(verbose=False).store(fd)
 			print(k+'/'+str(c))
 			return 0
 		except Exception as e:
@@ -34,7 +34,7 @@ def main(args):
 		try:
 			k, c = args.download.split('/')
 			c = int(c)
-			res = Client().retrieve(k, c)
+			res = Client(verbose=False).retrieve(k, c)
 			util.printraw(res)
 			return 0
 		except Exception as e:
