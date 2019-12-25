@@ -1,6 +1,6 @@
 # local imports
-from storage import SingleKeyStorage as Client
-import msg, util
+from jsonstore.storage import SingleKeyStorage as Client
+from jsonstore import msg, util
 # other imports
 import argparse
 

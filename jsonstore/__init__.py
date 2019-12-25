@@ -1,1 +1,1 @@
-from storage import SingleKeyStorage as Client
+from jsonstore.storage import SingleKeyStorage as Client
